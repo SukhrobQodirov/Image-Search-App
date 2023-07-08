@@ -5,9 +5,8 @@
 }
 
 body {
+    margin-bottom: 60px;
     line-height: 1.6;
-    color: white;
-    background-color: rgb(99, 102, 105);
 }
 
 ul {
@@ -20,31 +19,101 @@ a {
 }
 
 .container {
-    width: 1440px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
 .heading {
-    margin-top: 40px;
+    margin: 40px 0;
     font-size: 36px;
     font-weight: bold;
     text-align: center;
 }
 
-.images-list {
-    margin-top: 40px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+.form {
+    width: fit-content;
+    margin: 0 auto;
 }
 
-.image-item {
-    flex-basis: 30%;
-    overflow: hidden;
+.search-input {
+    width: 60%;
+    max-width: 400px;
+    padding: 10px 20px;
+    color: #333;
+    font-size: 18px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    border: none;
     border-radius: 5px;
 }
 
-.image-item img {
+.search-input:focus {
+    outline: none;
+}
+
+.search-button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #138065;
+    font-size: 18px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.images-list {
     width: 100%;
+    margin-top: 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.image-item {
+    flex-basis: 400px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.image {
+    width: 100%;
+    object-fit: cover;
+    transition: opacity .2s ease-in-out;
+    cursor: pointer;
+}
+
+.image-item:hover .image {
+    opacity: .8;
+}
+
+.image-item-link {
+    padding: 10px;
+    font-size: 20px;
+    color: #333;
+    display: block;
+    text-transform: capitalize;
+}
+
+.show-more-button {
+    margin: 30px auto;
+    padding: 10px 20px;
+    display: block;
+    font-size: 18px;
+    color: #fff;
+    background-color: #008cba;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity .2s ease-in-out;
+    /* display: none; */
+}
+
+.show-more-button:hover {
+    opacity: .8;
 }
